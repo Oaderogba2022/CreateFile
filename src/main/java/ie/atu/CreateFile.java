@@ -12,9 +12,9 @@ public class CreateFile {
             System.out.println("My file is located at " +myFile.getAbsolutePath());
             String info = "hello";
             try{
-                FileWriter myWriter = new FileWriter(myFile,true);
-                myWriter.write("good");
-                myWriter.close();
+                PrintWriter outputWriter = new PrintWriter(new FileWriter (myFile,true));
+                outputWriter.println("good");
+                outputWriter.println();
 
             }
             catch (IOException e){
